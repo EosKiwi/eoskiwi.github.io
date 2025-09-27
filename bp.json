@@ -1,0 +1,61 @@
+{
+  "producer_account_name": "eoskiwi.com",
+  "org": {
+    "candidate_name": "Eos Kiwi",
+    "website": "https://eoskiwi.com",
+    "email": "ops@eoskiwi.com",
+    "branding": {
+      "logo_256": "https://eoskiwi.com/assets/logo-256.png",
+      "logo_1024": "https://eoskiwi.com/assets/logo-1024.png",
+      "logo_svg": "https://eoskiwi.com/assets/logo.svg"
+    },
+    "location": "Bangkok, Thailand",
+    "social": {
+      "twitter": "https://x.com/eoskiwi",
+      "github": "https://github.com/eoskiwi",
+      "telegram": "https://t.me/eoskiwi"
+    }
+  },
+
+  "location": {
+    "name": "Bangkok, Thailand",
+    "country": "TH",
+    "latitude": 13.7563,
+    "longitude": 100.5018
+  },
+
+  "chains": [
+    {
+      "chain": "eos",
+      "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906"
+    }
+  ],
+
+  "nodes": [
+    {
+      "node_type": "producer",
+      "location": "Bangkok, TH",
+      "p2p_endpoint": "p2p.eoskiwi.com:9876",
+      "api_endpoint": "https://api.eoskiwi.com",
+      "ssl_endpoint": "https://api.eoskiwi.com",
+      "features": [
+        "p2p",
+        "ssl"
+      ],
+      "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906"
+    },
+    {
+      "node_type": "query",
+      "location": "Bangkok, TH",
+      "api_endpoint": "https://api.eoskiwi.com",
+      "ssl_endpoint": "https://api.eoskiwi.com",
+      "features": [
+        "chain_api",
+        "history",
+        "ssl",
+        "cors"
+      ],
+      "chain_id": "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906"
+    }
+  ]
+}
