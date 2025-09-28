@@ -4,23 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Eos Kiwi</title>
-  <meta name="description" content="Eos Kiwi — 简洁、透明，专注 EOS 生态的信息与服务。">
+  <meta name="description" content="Eos Kiwi — 简洁、透明,专注 EOS 生态的信息与服务.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="shortcut icon" href="favicon.ico">
   <style>
     :root{
-      --bg:#0b0f14;
-      --panel:#121922;
-      --text:#e6edf3;
-      --sub:#8aa0b2;
-      --brand:#3fd2ff;
+      --bg:#0b0f14; --panel:#121922; --text:#e6edf3; --sub:#8aa0b2; --brand:#3fd2ff;
+      /* 与 Logo 同色（按需微调为你的实际值） */
+      --logo:#8fb0bf;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
       font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
-      color:var(--text); background:radial-gradient(1200px 600px at 80% -10%,#142030 0%,transparent 60%), var(--bg);
+      color:var(--text);
+      background:radial-gradient(1200px 600px at 80% -10%,#142030 0%,transparent 60%), var(--bg);
       display:flex; align-items:center; justify-content:center;
     }
     .card{
@@ -32,50 +31,51 @@
       padding:36px 28px;
     }
     .logo-row{display:flex;align-items:center;gap:18px;margin-bottom:14px}
-    .logo{
-      width:56px;height:56px;border-radius:12px;
-      background:conic-gradient(from 0deg, #3fd2ff, #7af1c8, #3fd2ff);
-      display:grid;place-items:center;box-shadow:0 6px 24px rgba(63,210,255,.25);
+    /* 使用图片做 logo */
+    img.logo{
+      width:64px; height:64px; object-fit:contain;
+      border-radius:14px;
+      background:rgba(255,255,255,.02);
+      border:1px solid rgba(255,255,255,.06);
+      box-shadow:0 6px 22px rgba(63,210,255,.20);
+      padding:6px;
     }
-    .logo::after{
-      content:""; width:26px;height:26px;border-radius:6px;
-      background:linear-gradient(145deg,#0e141d,#1b2a3a);
-      border:1px solid rgba(255,255,255,.08);
+    h1{
+      margin:0; font-size:28px; letter-spacing:.3px;
+      color:var(--logo);
+      text-shadow:0 0 8px color-mix(in srgb, var(--logo) 40%, transparent);
     }
-    h1{margin:0;font-size:28px;letter-spacing:.3px}
-    .tag{color:var(--sub);font-size:14px;margin-top:2px}
+    .tag{color:var(--sub); font-size:14px; margin-top:2px}
+
     .intro{
-      margin-top:14px;
-      color:#c8d5e3;
-      font-size:17px;
+      margin-top:14px; color:#c8d5e3; font-size:17px;
       background:rgba(255,255,255,.03);
       border:1px solid rgba(255,255,255,.06);
-      border-radius:14px;
-      padding:18px 16px;
+      border-radius:14px; padding:18px 16px;
     }
-    .meta{margin-top:16px;color:var(--sub);font-size:14px}
-    a{color:var(--brand);text-decoration:none}
+    .meta{margin-top:16px; color:var(--sub); font-size:14px}
+    a{color:var(--brand); text-decoration:none}
     a:hover{text-decoration:underline}
-    footer{margin-top:16px;color:#7f93a6;font-size:12px;opacity:.8}
+    footer{margin-top:16px; color:#7f93a6; font-size:12px; opacity:.8}
   </style>
 </head>
 <body>
   <main class="card">
     <div class="logo-row">
-      <div class="logo" aria-hidden="true"></div>
+      <img class="logo" src="logo-1024.png" srcset="logo-1024.png 2x, logo-512.png 1x" alt="Eos Kiwi Logo">
       <div>
         <h1>Eos Kiwi</h1>
         <div class="tag">简洁、透明 · 专注 EOS</div>
       </div>
     </div>
+
     <p class="intro">
       Eos Kiwi 是一个面向 EOS 社区的轻量级站点,提供基础信息与进展摘要,保持独立与中立立场.<br>
       Eos Kiwi is a lightweight website for the EOS community, providing basic information and progress summaries, while maintaining an independent and neutral stance.
     </p>
     本页面仅作简介展示,后续会根据社区反馈持续完善.
     <div class="meta">
-      主页：<a href="https://eoskiwi.com" target="_blank" rel="noopener">eoskiwi.com</a>
-      <br>
+      主页：<a href="https://eoskiwi.com" target="_blank" rel="noopener">eoskiwi.com</a><br>
       反馈：<a href="mailto:hi@eoskiwi.com">hi@eoskiwi.com</a>
     </div>
     <footer>© <span id="y"></span> Eos Kiwi</footer>
