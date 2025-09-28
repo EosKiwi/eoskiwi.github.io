@@ -11,7 +11,6 @@
     },
     "location": "Thailand",
     "social": {
-      "twitter": "https://x.com/eoskiwi",
       "github": "https://github.com/eoskiwi",
       "telegram": "https://t.me/eoskiwi"
     }
@@ -34,7 +33,7 @@
   "nodes": [
     {
       "node_type": "producer",
-      "location": "TH",
+      "location": "Thailand",
       "p2p_endpoint": "p2p.eoskiwi.com:9876",
       "api_endpoint": "https://api.eoskiwi.com",
       "ssl_endpoint": "https://api.eoskiwi.com",
@@ -46,7 +45,7 @@
     },
     {
       "node_type": "query",
-      "location": "TH",
+      "location": "Thailand",
       "api_endpoint": "https://api.eoskiwi.com",
       "ssl_endpoint": "https://api.eoskiwi.com",
       "features": [
