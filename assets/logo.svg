@@ -1,32 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 2000" width="512" height="512">
-  <defs>
-    <linearGradient id="lineGradient" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%"  stop-color="#3A9BDC"/>   <!-- 上亮蓝 -->
-      <stop offset="100%" stop-color="#0D1B2A"/> <!-- 下深蓝黑 -->
-    </linearGradient>
-  </defs>
+<defs>
+  <linearGradient id="lineGradient" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"  stop-color="#FF3CAC"/>
+    <stop offset="50%" stop-color="#784BA0"/>
+    <stop offset="100%" stop-color="#2B86C5"/>
+  </linearGradient>
+</defs>
 
-  <g transform="translate(1000 1000) scale(0.88 1.12) translate(-1000 -1000)">
-    <path
-      fill="none"
-      stroke="url(#lineGradient)"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="8"
-      vector-effect="non-scaling-stroke"
-      d="m680.39 725.61
-         l319.58 1003.6
-         -474.21 -297.14
-         154.63 -706.46
-         319.58 -436.61
-         v306.23
-         l-474.21 836.84
-         h948.9
-         l-474.21 -836.84
-         v-306.23
-         l319.58 436.61
-         154.63 706.46
-         -474.21 297.14
-         319.58 -1003.6" />
-  </g>
+<g transform="translate(1000 1000) scale(0.88 1.12) translate(-1000 -1000)">
+  <path
+    fill="none"
+    stroke="url(#lineGradient)"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="6"
+    vector-effect="non-scaling-stroke"
+    d="m680.39 725.61
+       l319.58 1003.6
+       -474.21 -297.14
+       154.63 -706.46
+       319.58 -436.61
+       v306.23
+       l-474.21 836.84
+       h948.9
+       l-474.21 -836.84
+       v-306.23
+       l319.58 436.61
+       154.63 706.46
+       -474.21 297.14
+       319.58 -1003.6" />
+</g>
 </svg>
