@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Eos Kiwi | Ownership Disclosure</title>
-  <meta name="description" content="Eos Kiwi — Ownership / Team disclosure for EOS BP operations.">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="shortcut icon" href="favicon.ico">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ownership Disclosure - Eos Kiwi | Clear, transparent commitments for EOS block producer operations. | 简洁、透明,专注 EOS 生态的信息与服务.</title>
+  <meta name="description" content="Eos Kiwi ownership disclosure for EOS BP operations. 简洁、透明的节点所有权披露.">
+  <meta name="description" content="Eos Kiwi — 简洁、透明,专注 EOS 生态的信息与服务.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="shortcut icon" href="favicon.ico" />
   <style>
     :root{
-      --bg:#0b0f14; --panel:#121922; --text:#e6edf3; --sub:#8aa0b2;
-      --brand:#3fd2ff;
-      /* 与 Logo 同步的文字渐变（#C1D6DC → #6E848D） */
-      --grad-from:#C1D6DC; --grad-to:#6E848D;
+      --bg:#0b0f14; --panel:#121922; --text:#e6edf3; --sub:#8aa0b2; --brand:#3fd2ff;
+      /* Logo 及标题使用的渐变色（与 Code-of-Conduct 保持一致） */
+      --logo-grad-start:#C1D6DC; --logo-grad-end:#6E848D;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
@@ -21,8 +21,10 @@
       font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Arial,"Noto Sans SC","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
       color:var(--text);
       background:radial-gradient(1200px 600px at 80% -10%,#142030 0%,transparent 60%), var(--bg);
-      display:flex; align-items:center; justify-content:center;
-      padding:24px;
+      display:flex; align-items:flex-start; justify-content:center;
+      /* 与 Code-of-Conduct 顶部留白一致（含安全区） */
+      padding: 32px 24px;
+      padding-top: calc(env(safe-area-inset-top, 0px) + 64px);
     }
     .card{
       width:min(980px,96vw);
@@ -30,226 +32,209 @@
       border:1px solid rgba(255,255,255,.06);
       border-radius:18px;
       box-shadow:0 10px 40px rgba(0,0,0,.35);
-      padding:32px 24px;
+      padding:40px 24px;
     }
-    .top{
-      display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:14px;
+    .logo-row{
+      display:flex;align-items:center;gap:18px;margin-bottom:22px;
     }
-    .logo-row{display:flex;align-items:center;gap:16px}
     img.logo{
-      width:56px; height:56px; object-fit:contain;
-      border-radius:14px; padding:6px;
-      background:rgba(255,255,255,.02);
+      width:64px;height:64px;object-fit:contain;
+      border-radius:14px;background:rgba(255,255,255,.02);
       border:1px solid rgba(255,255,255,.06);
       box-shadow:0 6px 22px rgba(63,210,255,.20);
+      padding:6px;
     }
     h1{
-      margin:0; font-size:26px; letter-spacing:.2px;
-      background: linear-gradient(135deg,var(--grad-from),var(--grad-to));
-      -webkit-background-clip: text; background-clip: text;
-      color: transparent;
+      margin:0;font-size:28px;letter-spacing:.3px;
+      background:linear-gradient(135deg,var(--logo-grad-start),var(--logo-grad-end));
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+      text-shadow:0 0 8px rgba(193,214,220,.18);
     }
-    .tag{color:var(--sub); font-size:14px; margin-top:2px}
+    .subtag{color:var(--sub);font-size:14px;margin-top:2px}
 
-    .nav{
-      display:flex; gap:10px; flex-wrap:wrap;
-    }
-    .nav a, .nav button{
-      appearance:none; -webkit-appearance:none;
-      border:1px solid rgba(255,255,255,.10);
-      background:rgba(255,255,255,.03);
-      color:#cfe1ea; font-size:13px;
-      padding:8px 12px; border-radius:10px;
-      cursor:pointer; text-decoration:none;
-    }
-    .nav a:hover, .nav button:hover{border-color:rgba(255,255,255,.18)}
-    .nav .primary{
-      border-color:rgba(255,255,255,.16);
-      box-shadow:0 4px 14px rgba(193,214,220,.10);
-    }
-
-    .notice{
-      margin-top:10px;
+    .hint{
+      margin-top:12px;
+      color:#c8d5e3;font-size:14.5px;
       background:rgba(255,255,255,.03);
       border:1px solid rgba(255,255,255,.06);
-      border-radius:12px; padding:12px 14px;
-      color:#c8d5e3; font-size:15px;
+      border-radius:12px;padding:12px 14px;
     }
-    .notice small{color:#9bb0be}
 
-    .section{
-      margin-top:18px;
-      background:rgba(255,255,255,.02);
-      border:1px solid rgba(255,255,255,.05);
-      border-radius:14px; padding:18px 16px;
+    .lang{
+      display:flex;gap:10px;margin-top:12px;margin-bottom:8px;
     }
-    .section h2{
-      margin:0 0 8px; font-size:18px; font-weight:700;
-      color:#d8e6ee;
+    .lang button{
+      background:#0f1621;color:#cfe0eb;border:1px solid rgba(255,255,255,.08);
+      padding:6px 10px;border-radius:8px;cursor:pointer;font-size:13px;
     }
-    .section p{margin:6px 0 0; color:#cfe1ea}
+    .lang button.active{border-color:#5cc9ff;color:#fff}
 
     .grid{
-      display:grid; gap:12px;
-      grid-template-columns: repeat(2, minmax(0,1fr));
+      display:grid;gap:16px;margin-top:14px;
+      grid-template-columns:1fr 1fr;
     }
-    .grid .section{margin-top:0}
-    @media (max-width:820px){
-      .grid{grid-template-columns:1fr}
+    .box{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(255,255,255,.06);
+      border-radius:14px;padding:18px;
     }
-
-    .lang-switch{
-      margin-top:10px; display:flex; gap:8px;
-    }
-    .hidden{display:none}
-
-    footer{margin-top:16px; color:#7f93a6; font-size:12px; opacity:.85}
-    a{color:var(--brand); text-decoration:none}
+    h2{margin:0 0 12px 0;font-size:18px}
+    .muted{color:var(--sub)}
+    a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
+
+    .footer{
+      margin-top:18px;color:#7f93a6;font-size:12px;opacity:.85
+    }
+
+    /* 单列自适应 */
+    @media (max-width: 780px){
+      body{ padding-top: calc(env(safe-area-inset-top, 0px) + 72px); }
+      .card{ padding:32px 18px; }
+      .grid{ grid-template-columns:1fr; }
+    }
   </style>
 </head>
 <body>
   <main class="card">
-    <div class="top">
-      <div class="logo-row">
-        <img class="logo" src="/assets/logo-1024.png"
-             srcset="/assets/logo-1024.png 2x, /assets/logo-512.png 1x"
-             alt="Eos Kiwi Logo">
-        <div>
-          <h1>Eos Kiwi · Ownership Disclosure</h1>
-          <div class="tag">Clear, transparent information about our team, structure, and governance.</div>
+    <!-- 顶部与 Code-of-Conduct 一致的 logo 区 -->
+    <div class="logo-row">
+      <img class="logo" src="/assets/logo-1024.png"
+           srcset="/assets/logo-1024.png 2x, /assets/logo-512.png 1x"
+           alt="Eos Kiwi Logo">
+      <div>
+        <h1>Eos Kiwi — Ownership Disclosure</h1>
+        <div class="subtag">Clear, transparent ownership for EOS BP operations</div>
+      </div>
+    </div>
+
+    <div class="hint" id="notice-en">
+      This page is a public ownership disclosure for BP operations.
+      Major updates will be recorded at the bottom of this page.
+    </div>
+    <div class="hint" id="notice-zh" style="display:none">
+      本页为节点运营公开所有权披露；如有重大更新,将在页面底部记录修订时间.
+    </div>
+
+    <div class="lang">
+      <button id="btn-en" class="active">English</button>
+      <button id="btn-zh">中文</button>
+    </div>
+
+    <!-- English -->
+    <section id="en">
+      <div class="grid">
+        <div class="box">
+          <h2>1) Entity &amp; Independence</h2>
+          <p><strong>Name:</strong> Eos Kiwi Team</p>
+          <p><strong>Independence:</strong> No outside investors. We operate independently with a commitment to neutrality in EOS governance.</p>
+        </div>
+        <div class="box">
+          <h2>2) Team &amp; Roles</h2>
+          <p><strong>Founder / Technical Lead:</strong> Glies</p>
+          <p><strong>Contributors:</strong> Community developers (open contribution model)</p>
+        </div>
+
+        <div class="box">
+          <h2>3) Ownership Structure</h2>
+          <p>There is no equity sold to third parties. Contributions are tracked via open workflows and public commits where applicable.</p>
+        </div>
+        <div class="box">
+          <h2>4) Funding &amp; Sustainability</h2>
+          <p>Operations are funded by the team and possible block rewards. Any external support (if any) will be disclosed on this page.</p>
+        </div>
+
+        <div class="box">
+          <h2>5) Contact</h2>
+          <p>
+            Website: <a href="https://eoskiwi.com" target="_blank" rel="noopener">eoskiwi.com</a><br>
+            Email: <a href="mailto:ops@eoskiwi.com">ops@eoskiwi.com</a><br>
+            GitHub: <a href="https://github.com/eoskiwi" target="_blank" rel="noopener">github.com/eoskiwi</a><br>
+            Telegram: <a href="https://t.me/eoskiwi" target="_blank" rel="noopener">@eoskiwi</a>
+          </p>
+        </div>
+        <div class="box">
+          <h2>Revision</h2>
+          <p class="muted">Last updated: <span id="rev-en">—</span></p>
         </div>
       </div>
-      <nav class="nav">
-        <a class="primary" href="index.html">Home</a>
-        <a href="bp.json" target="_blank" rel="noopener">bp.json</a>
-        <a href="code-of-conduct.html">Code of Conduct</a>
-      </nav>
-    </div>
+    </section>
 
-    <div class="notice">
-      This page is a public ownership disclosure for BP operations. Major updates will be recorded at the bottom of this page.<br>
-      <small>本页为节点运营公开所有权披露；如有重大更新，将在页面底部记录修订时间。</small>
-
-      <div class="lang-switch">
-        <button id="btn-en" type="button">English</button>
-        <button id="btn-zh" type="button">中文</button>
-      </div>
-    </div>
-
-    <!-- EN -->
-    <div id="en" class="content-en">
-      <div class="grid" style="margin-top:14px">
-        <section class="section">
-          <h2>1) Entity & Independence</h2>
-          <p><strong>Name:</strong> Eos Kiwi Team</p>
-          <p><strong>Legal Entity (proposed):</strong> Eos Kiwi Foundation, Thailand</p>
-          <p><strong>Independence:</strong> No outside investors. We operate independently with a commitment to neutrality in EOS governance.</p>
-        </section>
-
-        <section class="section">
-          <h2>2) Team & Roles</h2>
-          <p><strong>Founder / Technical Lead:</strong> Lucas</p>
-          <p><strong>Contributors:</strong> Community developers (open contribution model)</p>
-        </section>
-      </div>
-
+    <!-- 中文 -->
+    <section id="zh" style="display:none">
       <div class="grid">
-        <section class="section">
-          <h2>3) Ownership Structure</h2>
-          <p>There is no equity sold to third parties. Contributions are tracked via open source workflows and public commits where applicable.</p>
-        </section>
+        <div class="box">
+          <h2>1）主体与独立性</h2>
+          <p><strong>名称:</strong>Eos Kiwi Team</p>
+          <p><strong>独立性:</strong>无外部投资；独立运营,承诺在 EOS 治理中保持中立.</p>
+        </div>
+        <div class="box">
+          <h2>2）团队与角色</h2>
+          <p><strong>创始人 / 技术负责人:</strong>Giles</p>
+          <p><strong>贡献者:</strong>社区开发者（开放式贡献模式）</p>
+        </div>
 
-        <section class="section">
-          <h2>4) Funding & Sustainability</h2>
-          <p>Operations are funded by the team and possible block rewards. Any external support (if any) will be disclosed on this page.</p>
-        </section>
+        <div class="box">
+          <h2>3）所有权结构</h2>
+          <p>不向第三方出售股权.贡献会通过开源流程与公共提交记录进行跟踪（如适用）.</p>
+        </div>
+        <div class="box">
+          <h2>4）资金与可持续性</h2>
+          <p>运营资金来自团队与潜在的区块奖励.如有任何外部资助,将在本页披露.</p>
+        </div>
+
+        <div class="box">
+          <h2>5）联系</h2>
+          <p>
+            主页:<a href="https://eoskiwi.com" target="_blank" rel="noopener">eoskiwi.com</a><br>
+            邮箱:<a href="mailto:ops@eoskiwi.com">ops@eoskiwi.com</a><br>
+            GitHub:<a href="https://github.com/eoskiwi" target="_blank" rel="noopener">github.com/eoskiwi</a><br>
+            Telegram:<a href="https://t.me/eoskiwi" target="_blank" rel="noopener">@eoskiwi</a>
+          </p>
+        </div>
+        <div class="box">
+          <h2>修订</h2>
+          <p class="muted">最近更新:<span id="rev-zh">—</span></p>
+        </div>
       </div>
+    </section>
 
-      <div class="grid">
-        <section class="section">
-          <h2>5) Conflicts of Interest</h2>
-          <p>We avoid conflicts of interest and disclose any potential conflicts that may impact neutrality, including relationships with other BPs or service providers.</p>
-        </section>
-
-        <section class="section">
-          <h2>6) Governance & Transparency</h2>
-          <p>Key decisions affecting infrastructure or governance will be communicated through our website and public channels.</p>
-        </section>
-      </div>
-
-      <section class="section">
-        <h2>7) Contact</h2>
-        <p><strong>Web:</strong> <a href="https://eoskiwi.com" target="_blank" rel="noopener">eoskiwi.com</a></p>
-        <p><strong>Email:</strong> <a href="mailto:ops@eoskiwi.com">ops@eoskiwi.com</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/eoskiwi" target="_blank" rel="noopener">github.com/eoskiwi</a></p>
-        <p><strong>Telegram:</strong> <a href="https://t.me/eoskiwi" target="_blank" rel="noopener">t.me/eoskiwi</a></p>
-      </section>
-    </div>
-
-    <!-- ZH -->
-    <div id="zh" class="content-zh hidden">
-      <div class="grid" style="margin-top:14px">
-        <section class="section">
-          <h2>1) 实体与独立性</h2>
-          <p><strong>名称：</strong>Eos Kiwi 团队</p>
-          <p><strong>拟登记法人：</strong>Eos Kiwi Foundation（泰国）</p>
-          <p><strong>独立性：</strong>无外部投资者；我们独立运营，承诺在 EOS 治理中保持中立。</p>
-        </section>
-
-        <section class="section">
-          <h2>2) 团队与职责</h2>
-          <p><strong>创始人 / 技术负责人：</strong>Lucas</p>
-          <p><strong>贡献者：</strong>社区开发者（开放协作模式）</p>
-        </section>
-      </div>
-
-      <div class="grid">
-        <section class="section">
-          <h2>3) 所有权结构</h2>
-          <p>不向第三方出售股权。贡献通过开源流程与公共提交记录进行追踪（如适用）。</p>
-        </section>
-
-        <section class="section">
-          <h2>4) 资金与可持续性</h2>
-          <p>节点运营由团队与可能的出块奖励支持。若未来获得任何外部支持，将在本页披露。</p>
-        </section>
-      </div>
-
-      <div class="grid">
-        <section class="section">
-          <h2>5) 利益冲突</h2>
-          <p>我们避免利益冲突；如存在影响中立性的潜在冲突（含与其他 BP 或服务商关系），将主动披露。</p>
-        </section>
-
-        <section class="section">
-          <h2>6) 治理与透明</h2>
-          <p>涉及基础设施或治理的重要决策，将通过官网与公共渠道向社区同步。</p>
-        </section>
-      </div>
-
-      <section class="section">
-        <h2>7) 联系方式</h2>
-        <p><strong>网站：</strong><a href="https://eoskiwi.com" target="_blank" rel="noopener">eoskiwi.com</a></p>
-        <p><strong>邮箱：</strong><a href="mailto:ops@eoskiwi.com">ops@eoskiwi.com</a></p>
-        <p><strong>GitHub：</strong><a href="https://github.com/eoskiwi" target="_blank" rel="noopener">github.com/eoskiwi</a></p>
-        <p><strong>Telegram：</strong><a href="https://t.me/eoskiwi" target="_blank" rel="noopener">t.me/eoskiwi</a></p>
-      </section>
-    </div>
-
-    <footer>
-      Last updated: <span id="ts"></span>
-    </footer>
+    <div class="footer">© <span id="year"></span> Eos Kiwi</div>
   </main>
 
   <script>
-    // 默认英文
+    // 顶部语言切换（默认英文）
+    const btnEn = document.getElementById('btn-en');
+    const btnZh = document.getElementById('btn-zh');
     const en = document.getElementById('en');
     const zh = document.getElementById('zh');
-    document.getElementById('btn-en').addEventListener('click', ()=>{ en.classList.remove('hidden'); zh.classList.add('hidden'); });
-    document.getElementById('btn-zh').addEventListener('click', ()=>{ zh.classList.remove('hidden'); en.classList.add('hidden'); });
-    // 更新时间戳
-    document.getElementById('ts').textContent = new Date().toISOString().slice(0,19).replace('T',' ');
+    const nEn = document.getElementById('notice-en');
+    const nZh = document.getElementById('notice-zh');
+
+    btnEn.onclick = () => {
+      en.style.display = '';
+      zh.style.display = 'none';
+      nEn.style.display = '';
+      nZh.style.display = 'none';
+      btnEn.classList.add('active');
+      btnZh.classList.remove('active');
+      document.documentElement.lang = 'en';
+    };
+    btnZh.onclick = () => {
+      en.style.display = 'none';
+      zh.style.display = '';
+      nEn.style.display = 'none';
+      nZh.style.display = '';
+      btnZh.classList.add('active');
+      btnEn.classList.remove('active');
+      document.documentElement.lang = 'zh-CN';
+    };
+
+    // 年份与修订时间（可改为手动写死日期）
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const iso = new Date().toISOString().slice(0,10);
+    document.getElementById('rev-en').textContent = iso;
+    document.getElementById('rev-zh').textContent = iso;
   </script>
 </body>
 </html>
