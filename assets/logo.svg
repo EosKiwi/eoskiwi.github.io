@@ -13,7 +13,7 @@
     stroke="url(#lineGradient)"
     stroke-linecap="round"
     stroke-linejoin="round"
-    stroke-width="6"
+    stroke-width="9"
     vector-effect="non-scaling-stroke"
     d="m680.39 725.61
        l319.58 1003.6
