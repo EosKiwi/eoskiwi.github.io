@@ -3,13 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Eos Kiwi | Code of Conduct</title>
+  <title>Code of Conduct | Eos Kiwi -- Simple, transparent, and focused on EOS ecosystem information and services.</title>
   <meta name="description" content="Eos Kiwi Code of Conduct – Clear, transparent commitments for EOS block producer operations.">
   <style>
     :root{
+      --logo: #8fb0bf;
       --bg:#0b0f14; --panel:#121722; --text:#e6edf3; --muted:#9db0bf; --accent:#75c7e2;
       --line:rgba(255,255,255,.08);
     }
+
+    img.logo{
+        width:64px; height:64px; object-fit:contain;
+        border-radius:14px;
+        background:rgba(255,255,255,.02);
+        border:1px solid rgba(255,255,255,.06);
+        box-shadow:0 6px 22px rgba(63,210,255,.20);
+        padding:6px;
+    }
+
+    /* 标题颜色（纯色方案，与首页一致） */
+    .brand-title{
+        margin:0; font-size:28px; letter-spacing:.3px;
+        color:var(--logo);
+        text-shadow:0 0 8px color-mix(in srgb, var(--logo) 40%, transparent);
+    }
+
+    .logo-row{ display:flex; align-items:center; gap:18px; margin-bottom:14px; }
+    .brand-tag{ color: var(--sub); font-size:14px; margin-top:2px; }
+
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -46,11 +67,18 @@
 <body>
   <div class="wrap">
     <header>
-      <div class="logo" aria-hidden="true"></div>
-      <div>
-        <h1>Eos Kiwi — Code of Conduct</h1>
-        <div class="lang">Bilingual (English / 中文)</div>
-      </div>
+        <div class="logo-row">
+        <!-- 与首页一致：使用透明 PNG 做图标 -->
+        <img class="logo"
+            src="/assets/logo-1024.png"
+            srcset="/assets/logo-1024.png 2x, /assets/logo-512.png 1x"
+            alt="Eos Kiwi Logo">
+        <div>
+            <!-- 标题配色与首页一致（纯色或渐变，取决于你上面选择的 .brand-title 实现） -->
+            <h1 class="brand-title">Eos Kiwi — Code of Conduct</h1>
+            <div class="brand-tag">简洁、透明 · 专注 EOS</div>
+        </div>
+        </div>
     </header>
 
     <!-- Intro / TOC -->
