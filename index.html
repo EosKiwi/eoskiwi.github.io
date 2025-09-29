@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Eos Kiwi | Clear, transparent commitments for EOS block producer operations. | 简洁、透明,专注 EOS 生态的信息与服务.</title>
+  <meta name="description" content="Eos Kiwi Code of Conduct – Clear, transparent commitments for EOS block producer operations.">
   <meta name="description" content="Eos Kiwi — 简洁、透明,专注 EOS 生态的信息与服务.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="shortcut icon" href="favicon.ico">
   <style>
     :root{
       --bg:#0b0f14; --panel:#121922; --text:#e6edf3; --sub:#8aa0b2; --brand:#3fd2ff;
-      /* 与 Logo 同色（按需微调为你的实际值） */
       --logo:#8fb0bf;
     }
     *{box-sizing:border-box}
@@ -31,7 +31,6 @@
       padding:36px 28px;
     }
     .logo-row{display:flex;align-items:center;gap:18px;margin-bottom:14px}
-    /* 使用图片做 logo */
     img.logo{
       width:64px; height:64px; object-fit:contain;
       border-radius:14px;
@@ -53,10 +52,30 @@
       border:1px solid rgba(255,255,255,.06);
       border-radius:14px; padding:18px 16px;
     }
-    .meta{margin-top:16px; color:var(--sub); font-size:14px}
-    a{color:var(--brand); text-decoration:none}
+
+    /* 新增：导航按钮区域 */
+    .links{
+      margin-top:16px; display:flex; gap:12px; flex-wrap:wrap;
+    }
+    .btn{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 14px; border-radius:12px;
+      background:linear-gradient(180deg,#162232 0%, #0f1824 100%);
+      border:1px solid rgba(255,255,255,.08);
+      color:#cfe6f3; text-decoration:none; font-size:14px;
+      box-shadow:0 6px 18px rgba(0,0,0,.25);
+      transition:transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+    }
+    .btn:hover{
+      transform:translateY(-1px);
+      box-shadow:0 10px 24px rgba(0,0,0,.35);
+      border-color:rgba(63,210,255,.35);
+    }
+
+    .meta{margin-top:16px;color:var(--sub);font-size:14px}
+    a{color:var(--brand);text-decoration:none}
     a:hover{text-decoration:underline}
-    footer{margin-top:16px; color:#7f93a6; font-size:12px; opacity:.8}
+    footer{margin-top:16px;color:#7f93a6;font-size:12px;opacity:.8}
   </style>
 </head>
 <body>
@@ -73,6 +92,21 @@
       Eos Kiwi 是一个面向 EOS 社区的轻量级站点,提供基础信息与进展摘要,保持独立与中立立场.<br>
       Eos Kiwi is a lightweight website for the EOS community, providing basic information and progress summaries, while maintaining an independent and neutral stance.
     </p>
+
+    <!-- 新增：导航按钮 -->
+    <div class="links">
+      <a class="btn" href="/bp.json" target="_blank" rel="noopener">
+        <!-- 简单小图标（CSS方块），也可换成 <img> -->
+        <span style="width:8px;height:8px;border-radius:2px;background:#3fd2ff;display:inline-block"></span>
+        BP Info
+      </a>
+      <a class="btn" href="/code-of-conduct.html" target="_blank" rel="noopener">
+        <span style="width:8px;height:8px;border-radius:2px;background:#7af1c8;display:inline-block"></span>
+        Code of Conduct
+      </a>
+    </div>
+    <p>
+
     本页面仅作简介展示,后续会根据社区反馈持续完善.
     <div class="meta">
       主页：<a href="https://eoskiwi.com" target="_blank" rel="noopener">eoskiwi.com</a><br>
