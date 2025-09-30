@@ -9,20 +9,18 @@
       "logo_1024": "https://eoskiwi.com/assets/logo-1024.png",
       "logo_svg": "https://eoskiwi.com/assets/logo.svg"
     },
-    "location": "Thailand",
+    "location": {
+      "name": "Thailand",
+      "country": "Bangkok",
+      "latitude": 13.7563,
+      "longitude": 100.5018
+    },
     "social": {
       "github": "https://github.com/eoskiwi",
       "telegram": "https://t.me/eoskiwi"
     },
     "ownership_disclosure": "https://eoskiwi.com/ownership.html",
     "code_of_conduct": "https://eoskiwi.com/Code-Conduct.html"
-  },
-
-  "location": {
-    "name": "Thailand",
-    "country": "Bangkok",
-    "latitude": 13.7563,
-    "longitude": 100.5018
   },
 
   "chains": [
