@@ -6,6 +6,7 @@
   <title>Eos Kiwi | Ownership Disclosure</title>
   <meta name="description" content="Public ownership, roles and independence disclosure of the Eos Kiwi BP, with a focus on long-term contributions to the EOS mainnet." />
   <link rel="icon" href="favicon.ico" />
+  <meta name="description" content="Eos Kiwi — 简洁、透明,专注 EOS 生态的信息与服务.">
   <style>
     :root{
       --logo:#8fb0bf;
@@ -60,6 +61,41 @@
       color:var(--text);padding:6px 10px;border-radius:10px;cursor:pointer;font-size:14px
     }
     .btn.active{outline:2px solid var(--accent)}
+
+    .lang-switch{
+        display:inline-flex;
+        gap:10px;
+        align-items:center;
+    }
+
+        .lang-btn{
+        appearance:none;
+        background:rgba(255,255,255,.02);
+        color:var(--text);
+        border:1px solid rgba(255,255,255,.12);
+        padding:8px 14px;
+        line-height:1;                /* 防止行高把按钮拉高 */
+        font-size:14px;
+        border-radius:12px;
+        cursor:pointer;
+        transition:all .18s ease;
+        box-shadow:0 2px 10px rgba(0,0,0,.18) inset;
+    }
+
+        /* 悬停态 */
+        .lang-btn:hover{
+        border-color:rgba(255,255,255,.22);
+        transform:translateY(-1px);
+    }
+
+        /* 激活态（边框用与你首页 logo 一致的颜色/渐变外发光） */
+        .lang-btn.active{
+        border-color:#8fb0bf;                     /* 可换成你的 var(--logo) */
+        box-shadow:
+            0 0 0 2px rgba(143,176,191,.25) inset,
+            0 0 12px rgba(143,176,191,.35);
+        background:linear-gradient(180deg,#1a2632,#121722);
+    }
   </style>
 </head>
 <body>
@@ -79,28 +115,21 @@
 
     <!-- Intro -->
     <div class="card">
-      <div class="grid">
-        <div class="small muted">
+        <div class="toc">
+        <div class="lang-switch" role="tablist" aria-label="Language switch">
+            <button class="lang-btn active" data-target="#lang-en" role="tab" aria-selected="true">English</button>
+            <button class="lang-btn" data-target="#lang-zh" role="tab" aria-selected="false">中文</button>
+           
+        </div>
+
+    </div>
+      <p class="muted small">
           This page publicly discloses ownership, roles and independence of BP operations, focusing on long-term contributions to the EOS mainnet.<br/>
           本页公开披露节点运营的所有权、职责与独立性,重点阐述对 EOS 主网的长期贡献与服务.
-        </div>
-        <div class="lang-btns" style="justify-content:flex-end">
-          <button class="btn active" id="btn-en">English</button>
-          <button class="btn" id="btn-zh">中文</button>
-        </div>
-      </div>
-      <div class="toc">
-        <a href="#entity">1. Entity & Mission / 实体与使命</a>
-        <a href="#team">2. Roles / 团队职责</a>
-        <a href="#ownership">3. Ownership / 所有权</a>
-        <a href="#funding">4. Funding / 资金与投入</a>
-        <a href="#conflicts">5. Conflicts / 利益冲突</a>
-        <a href="#transparency">6. Transparency / 透明度</a>
-      </div>
+      </p>
     </div>
-
     <!-- English -->
-    <section id="en" class="card" style="margin-top:16px">
+    <section id="lang-en" class="card" style="margin-top:16px">
       <h2 id="entity">1) Entity & Mission</h2>
       <ul>
         <li><strong>Entity:</strong> Eos Kiwi Team (independent operations, no external control or investors).</li>
@@ -108,7 +137,7 @@
         <li><strong>Focus Areas:</strong> core node reliability, security patching, observability, community support, and developer tooling.</li>
       </ul>
 
-      <h2 id="team">2) Team Roles (no personal names disclosed)</h2>
+      <h2 id="team">2) Team Roles </h2>
       <table>
         <thead><tr><th>Role</th><th>Responsibilities</th></tr></thead>
         <tbody>
@@ -152,7 +181,7 @@
 
       <h2 id="conflicts">5) Conflicts, Ethics & Governance</h2>
       <ul>
-        <li>No vote buying, collusion, or quid-pro-quo vote trading.</li>
+        <li>We commit to fair participation in governance and avoid any arrangements that may compromise neutrality or fairness in the voting process.</li>
         <li>No manipulation, smear campaigns, or actions that undermine the network.</li>
         <li>Disclose any material affiliations relevant to neutrality or decision-making.</li>
       </ul>
@@ -166,7 +195,7 @@
     </section>
 
     <!-- 中文 -->
-    <section id="zh" class="card" style="margin-top:16px; display:none">
+    <section id="lang-zh" class="card" style="margin-top:16px">
       <h2 id="entity-zh">1) 实体与使命</h2>
       <ul>
         <li><strong>实体：</strong>Eos Kiwi 团队(独立运营,无外部控制与投资人) .</li>
@@ -174,7 +203,7 @@
         <li><strong>重点方向：</strong>节点可靠性、安全修补、可观测性、社区支持与开发工具建设.</li>
       </ul>
 
-      <h2 id="team-zh">2) 团队职责(不展示个人姓名) </h2>
+      <h2 id="team-zh">2) 团队职责 </h2>
       <table>
         <thead><tr><th>职责</th><th>工作范围</th></tr></thead>
         <tbody>
@@ -213,7 +242,7 @@
         <li><strong>来源：</strong>团队自筹、潜在区块奖励;社区对公共工具的赞助(如有) .</li>
         <li><strong>主要投入：</strong>服务器/NVMe 存储、带宽、可观测性与安全审计.</li>
         <li><strong>预期占比(示例) ：</strong>基础设施 65–75%、安全 10–15%、社区/文档 10–15%、预备金 5–10%.</li>
-        <li>承诺定期(如按季度) 披露成本结构与公共产出概览.</li>
+        <li>承诺定期 (如按季度) 披露成本结构与公共产出概览.</li>
       </ul>
 
       <h2 id="conflicts-zh">5) 利益冲突与伦理</h2>
@@ -227,7 +256,7 @@
       <ul>
         <li>保持 <code>bp.json</code>、公共端点、链 ID 等元数据的最新.</li>
         <li>发布在线率/事件(状态页或 GitHub 报告) ;在安全前提下提供可复现实践.</li>
-        <li>提供公开交流渠道：网站、邮件、GitHub、Telegram 等.</li>
+        <li>提供公开交流渠道: 网站、邮件、GitHub、Telegram 等.</li>
       </ul>
     </section>
 
@@ -243,23 +272,33 @@
     </section>
   </div>
 
+  <!-- 语言切换脚本（默认显示英文） -->
   <script>
-    const now=new Date();
-    document.getElementById('y').textContent=now.getFullYear();
-    document.getElementById('d').textContent=now.toISOString().slice(0,10);
-    const btnEn=document.getElementById('btn-en'),btnZh=document.getElementById('btn-zh');
-    const secEn=document.getElementById('en'),secZh=document.getElementById('zh');
-    function setLang(l){
-      const en=l==="en";
-      secEn.style.display=en?"":"none";
-      secZh.style.display=en?"none":"";
-      btnEn.classList.toggle("active",en);
-      btnZh.classList.toggle("active",!en);
-      document.documentElement.lang=en?"en":"zh-CN";
+    const sections = {
+      '#lang-en': document.querySelector('#lang-en'),
+      '#lang-zh': document.querySelector('#lang-zh'),
+    };
+    function show(target){
+      Object.entries(sections).forEach(([sel, el])=>{
+        if(!el) return;
+        el.style.display = (sel === target) ? 'block':'none';
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn=>{
+        const on = btn.getAttribute('data-target') === target;
+        btn.classList.toggle('active', on);
+        btn.setAttribute('aria-selected', on ? 'true':'false');
+      });
     }
-    btnEn.onclick=()=>setLang("en");
-    btnZh.onclick=()=>setLang("zh");
-    setLang("en"); // 默认英文
+    // 默认英文
+    show('#lang-en');
+    document.querySelectorAll('.lang-btn').forEach(btn=>{
+      btn.addEventListener('click', ()=> show(btn.getAttribute('data-target')));
+    });
+
+    // 时间
+    const now = new Date();
+    document.getElementById('y').textContent = now.getFullYear();
+    document.getElementById('d').textContent = now.toISOString().slice(0,10);
   </script>
 </body>
 </html>
