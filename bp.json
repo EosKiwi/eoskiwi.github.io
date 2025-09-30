@@ -4,6 +4,8 @@
     "candidate_name": "Eos Kiwi",
     "website": "https://eoskiwi.com",
     "email": "ops@eoskiwi.com",
+    "ownership_disclosure": "https://eoskiwi.com/ownership.html",
+    "code_of_conduct": "https://eoskiwi.com/Code-Conduct.html",
     "branding": {
       "logo_256": "https://eoskiwi.com/assets/logo-256.png",
       "logo_512": "https://eoskiwi.com/assets/logo-512.png",
@@ -19,9 +21,7 @@
     "social": {
       "github": "https://github.com/eoskiwi",
       "telegram": "https://t.me/eoskiwi"
-    },
-    "ownership_disclosure": "https://eoskiwi.com/ownership.html",
-    "code_of_conduct": "https://eoskiwi.com/Code-Conduct.html"
+    }
   },
 
   "nodes": [
